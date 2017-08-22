@@ -1,0 +1,70 @@
+//
+//  CRFN.pch
+//  CRFN
+//
+//  Created by zlkj on 2017/2/9.
+//  Copyright © 2017年 zlkj. All rights reserved.
+//
+
+#ifndef CRFN_pch
+#define CRFN_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIView+Extension.h"
+#import "NSString+Extension.h"
+
+#define MFont(f) [UIFont systemFontOfSize:f]
+#define kIphone6Height 667.0
+
+#define kIphone6Width 375.0
+#define YouLikeLineCount 2
+#define YouLikeCellW ((SScreen_Width - YouLikeInset * (YouLikeLineCount - 1)) / YouLikeLineCount) * 1.0
+#define YouLikeInset kFit(6)
+#define YouLikeCellH kFit((250 - YouLikeInset))
+#define SScreen_Width [UIScreen mainScreen].bounds.size.width
+#define SScreen_Height [UIScreen mainScreen].bounds.size.height
+#define kFit(x) (SScreen_Width*((x)/kIphone6Width))
+#define MColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0f]
+
+#define TextSize kFit(16)
+
+
+
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#define HEIGHT [UIScreen mainScreen].bounds.size.height
+#define WIDTH   [UIScreen mainScreen].bounds.size.width
+#define NAV_HEIGHT 64
+#define BOTTOM_HEIGHT (([UIScreen mainScreen].bounds.size.width)>375?65:52)
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Masonry.h"
+#import "Utility.h"
+#import "MTLModel.h"
+#import "MJRefresh.h"
+#import "MyAdapter.h"
+#import "SwitchViewController.h"
+#import "AppAppearance.h"
+#import "UIImage+ImageFromColor.h"
+#import "MessageTool.h"
+#import "AFNetworking.h"
+#import "AFNetAPIClient.h"
+#import "URLManager.h"
+#import "UIImageView+WebCache.h"
+#import "AppDataManager.h"
+#import "SwitchViewController.h"
+#import <AlipaySDK/AlipaySDK.h>
+#import "MJExtension.h"
+
+
+#endif
+
+
+
+#endif /* CRFN_pch */
